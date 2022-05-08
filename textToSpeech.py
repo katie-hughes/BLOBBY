@@ -38,12 +38,14 @@ while(True):
 			play("Yeah")
 		elif "you" in word:
 			play("You")
+		elif "!" in word:
+			play("Exclaim")
 		else:
 			play(str(random.randint(1,4)))
 
 		if ('.' in word) or ('!' in word):
 			## end of sentance
 			sleep_time = 0.3
-		
+
 		time.sleep(sleep_time)
 	print()
