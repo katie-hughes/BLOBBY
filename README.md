@@ -1,4 +1,5 @@
 BLOBBY BLOBBY BLOBBY!!!
 
+Run as: python3 textToSpeech.py
 
-![Driving in a square](MRBLOBBY.jpeg)
+![BLOBBY](MRBLOBBY.jpeg)
