@@ -15,7 +15,7 @@ while(True):
 	nwords = len(spl)
 	for word in spl:
 		word = word.lower()
-		sleep_time = 0.05
+		sleep_time = 0
 		if "bye" in word:
 			play('Bye')
 		elif "hello" in word:
