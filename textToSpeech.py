@@ -9,22 +9,41 @@ def play(name):
 
 print("BLOBBY!!\n")
 while(True):
-	txt = input("\nPlease input your text!\n")
+	print("\nPlease input your text!")
+	txt = input()
 	spl = txt.split()
 	nwords = len(spl)
 	for word in spl:
-		if ('.' in word):
-			## end of sentance
-			print("BLOBBY.", end=' ')
-			play(str(random.randint(1,4)))
-			time.sleep(0.3)
-		elif ('!' in word):
-			## end of sentance
-			print("BLOBBY!!!", end=' ')
-			play('Exclaim')
-			time.sleep(0.3)
+		word = word.lower()
+		sleep_time = 0.05
+		if "bye" in word:
+			play('Bye')
+		elif "hello" in word:
+			play("Hello")
+		elif "hmm" in word:
+			play("Hmm")
+		elif "oh" in word:
+			play("Oh")
+		elif "reee" in word:
+			play("Reee")
+		elif "sorry" in word:
+			play("Sorry")
+		elif "thank" in word:
+			play("Thank")
+		elif "um" in word:
+			play("Um")
+		elif "what" in word:
+			play("What")
+		elif "yeah" in word:
+			play("Yeah")
+		elif "you" in word:
+			play("You")
 		else:
-			print('BLOBBY', end=' ')
 			play(str(random.randint(1,4)))
-			time.sleep(0.05)
+
+		if ('.' in word) or ('!' in word):
+			## end of sentance
+			sleep_time = 0.3
+		
+		time.sleep(sleep_time)
 	print()
